@@ -1,18 +1,27 @@
 {
-  "name": "28-Stu_Mini-project",
+  "name": "teamprofilegenerator",
   "version": "1.0.0",
-  "description": "In this activity, you will build a command-line tool that generates an HTML portfolio page from user input.",
+  "description": "A tool to help organize your team info.",
   "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "inquirer": "^8.0.0",
+    "jest": "^26.6.3"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "jest"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "inquirer": "^8.0.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/relentlessreed/week10.git"
   },
-  "devDependencies": {
-    "jest": "^26.6.3"
-  }
+  "author": "Edward Reed",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/relentlessreed/week10/issues"
+  },
+  "homepage": "https://github.com/relentlessreed/week10#readme"
 }
