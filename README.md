@@ -1,6 +1,8 @@
 # Team Profile Generator ![MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
-![Screenshot](img.png)
+![Screenshot](teamprofilegeneratordemo.png)
+
+[Demonstration Video of Deployed Application](https://drive.google.com/file/d/1mQE8bDJt_bxi-GIXbO9kFTsXHEYlP3n-/view?usp=sharing)
 
 # Description
 
