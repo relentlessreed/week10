@@ -1,0 +1,28 @@
+.employee-card {
+  border-radius: 10px;
+  border: none;
+  box-shadow: 5px 10px 15px #6e6e6e;
+  background-color: #ebebeb;
+  text-align: left;
+}
+
+.jumbotron {
+  background-color: salmon;
+  text-align: center;
+}
+
+.employee-card {
+  background-color: skyblue;
+}
+
+h2 {
+  color: white;
+}
+
+h3 {
+  color: white;
+}
+
+body {
+  font-weight: 600;
+}
