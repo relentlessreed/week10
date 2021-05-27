@@ -35,6 +35,6 @@ describe("Engineer", () => {
 
   it("Should return github using getter", () => {
     const engineer = new Engineer("Dave", 1, "dave@gmail.com", "davesgithub");
-    expect(engineer.gitHub).toEqual("davesgithub");
+    expect(engineer.github).toEqual("davesgithub");
   });
 });

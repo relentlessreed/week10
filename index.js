@@ -20,23 +20,23 @@ function promptsManager() {
     .prompt([
       {
         type: "input",
+        message: "Please enter the new team Manager's name:",
         name: "name",
-        message: "Enter the team managers name:",
       },
       {
         type: "input",
+        message: "Please enter the new team Manager's id:",
         name: "id",
-        message: "Enter the team managers id:",
       },
       {
         type: "input",
+        message: "Please enter the new team Manager's email address:",
         name: "email",
-        message: "Enter the team managers email address:",
       },
       {
         type: "input",
+        message: "Please enter the new team Manager's office number:",
         name: "officeNumber",
-        message: "Enter the team managers office number:",
       },
     ])
     .then(function ({ name, id, email, officeNumber }) {
@@ -55,17 +55,17 @@ function newMember() {
         type: "list",
         message: "Do you want to add any other Team Members??",
         choices: [
-          "I do not wish to add any more team members",
           "Add an Engineer",
           "Add an Intern",
+          "No more Team Members left to enter.",
         ],
         name: "addMember",
       },
     ])
     .then(function ({ addMember }) {
-      if (addMember === "Engineer") {
+      if (addMember === "Add an Engineer") {
         return promptsEngineer();
-      } else if (addMember === "Intern") {
+      } else if (addMember === "Add an Intern") {
         return promptsIntern();
       } else {
         htmlFooter();
@@ -73,7 +73,7 @@ function newMember() {
     });
 }
 
-// Add Engineer Questions function
+// Add for Engineer Data
 function promptsEngineer() {
   inquirer
     .prompt([
@@ -106,7 +106,7 @@ function promptsEngineer() {
     });
 }
 
-// Add Intern Questions function
+// Ask for Intern Data
 function promptsIntern() {
   inquirer
     .prompt([
@@ -148,7 +148,6 @@ function htmlHead() {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="/dist/style.css">
     <title>Team Profiles</title>
 </head>  
 <body>
@@ -169,14 +168,14 @@ function htmlHead() {
 
 function htmlCards(member) {
   return new Promise(function (resolve, reject) {
-    const name = member.name();
-    const id = member.id();
-    const email = member.email();
-    const role = member.role();
+    const name = member.name;
+    const id = member.id;
+    const email = member.email;
+    const role = member.role;
 
     let data = "";
     if (role === "Engineer") {
-      const github = member.github();
+      const github = member.github;
       data = `<div class="col d-sm-flex justify-content-center">
                 <div class="card employee-card mt-4">
                     <div class="card-header">
@@ -193,7 +192,7 @@ function htmlCards(member) {
                 </div>
             </div>`;
     } else if (role === "Intern") {
-      const school = member.school();
+      const school = member.school;
       data = `<div class="col d-sm-flex justify-content-center">
                 <div class="card employee-card mt-4">
                     <div class="card-header">
@@ -210,7 +209,7 @@ function htmlCards(member) {
                 </div>
             </div>`;
     } else {
-      const officeNumber = member.officeNumber();
+      const officeNumber = member.officeNumber;
       data = `<div class="col d-sm-flex justify-content-center">
                 <div class="card employee-card mt-4">
                     <div class="card-header">
